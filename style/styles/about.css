@@ -1,0 +1,397 @@
+.about {
+    padding: 80px 0 0   ;
+    background: url('../../img/boutus/blackashole.jpg') center / cover no-repeat;
+    position: relative;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+}
+
+.about-inner {
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.about-box1 {
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.about-box1-text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-box1-text > h2 {
+    font-size: 36px;
+    text-shadow: 4px 4px 0px #222;
+}
+
+.about-box1-text > h2:first-of-type {
+    margin-bottom: 30px;
+}
+
+.about-box1-img {
+    width: 40%;
+}
+
+.about-box2 {
+    width: 100%;
+    z-index: 5;
+}
+
+.about-contact-item {
+    width: 60%;
+    height: 300px;
+    background: #111;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-contact-item:nth-of-type(2):after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+}
+
+.about-contact-item:first-of-type {
+    float: left;
+}
+
+.about-contact-item:nth-of-type(2) {
+    float: right;
+    background: url('../../img/discord-bg.jpg') center / cover no-repeat;
+}
+
+.text-box {
+    display: flex;
+    position: relative;
+    z-index: 6;
+    height: 100%;
+}
+
+.text-box > img {
+    width: 35%;
+}
+
+.text-l {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text-l > h3 {
+    font-size: 28px;
+}
+
+.text-l > a {
+    width: 40%;
+    padding: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    background: #333;
+    transition: .4s;
+}
+
+.text-l > a:hover {
+    background: #444;
+    transition: .4s;
+}
+
+.ds-l {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.ds-l > h3 {
+    font-size: 28px;
+}
+
+.ds-l > a {
+    width: 40%;
+    padding: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    background: #333;
+    transition: .4s;
+}
+
+.ds-l > a:hover {
+    background: #444;
+    transition: .4s;
+}
+
+.about2 {
+    background: url('../../img/about2-bg.svg') center / cover no-repeat;
+}
+
+.about-dos {
+    margin-bottom: 25px;
+}
+
+.about-dos > h2 {
+    background: rgba(22,22,22,.9);
+    padding: 10px 30px;
+}
+
+.about-slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.about-slider-item {
+    width: 24%;
+    height: 80px;
+    background: rgba(33,33,33,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-slider-item > h4 {
+    font-size: 22px;
+}
+
+.about-slider-item2 {
+    width: 24%;
+    padding: 10px;
+    background: rgba(33,33,33,.9);
+    margin-bottom: 40px;
+}
+
+.about-quest {
+    width: 80%;
+    height: 400px;
+    background: url('../../img/quest-card.svg') center / cover no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.quest-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quest-text > h4 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.quest-form {
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quest-form > input {
+    width: 85%;
+    height: 50px;
+    padding: 0 20px;
+    color: #222;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.quest-form > button {
+    width: 15%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quest-form > button > img {
+    height: 60%;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.quest-form > button > img:hover {
+    transition: .2s;
+    transform: translateX(5px);
+}
+
+.quest-img {
+    width: 40%;
+    height: 100%;
+}
+
+.quest-img > img {
+    width: 95%;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .about-box1-text {
+        width: 100%;
+    }
+    .about-box1-img {
+        display: none;
+    }
+    .about-box1-text h2 {
+        font-size: 24px;
+    }
+    .about-contact-item {
+        width: 100%;
+        height: 230px;
+    }
+    .text-box {
+        justify-content: space-between;
+        position: relative;
+    }
+    .text-box > img {
+        width: 70%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    .text-box h3 {
+        font-size: 16px;
+        z-index: 6;
+    }
+    .text-box a {
+        font-size: 16px;
+        width: 60%;
+        padding: 5px 0;
+    }
+    .ds-l {
+        align-items: flex-start;
+    }
+    .about-slider-item2 {
+        padding: 5px;
+    }
+    .about-slider h4 {
+        font-size: 12px;
+        text-align: center;
+    }
+    .about-slider p {
+        font-size: 8px;
+    }
+    .about-quest {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .quest-text {
+        width: 100%;
+    }
+    .quest-text h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .quest-text input,
+    .quest-text button {
+        height: 30px;
+        font-size: 10px;
+        z-index: 6;
+    }
+    .quest-img {
+        position: absolute;
+        height: 50%;
+        width: 50%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .about-box1 h2 {
+        font-size: 22px;
+    }
+    .about-box1-img {
+        width: 30%;
+        height: 50%;
+    }
+    .about-box1-img img {
+        width: 100%;
+        height: 100%;
+    }
+    .text-box h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .text-box a {
+        padding: 10px 0;
+    }
+    .text-box img {
+        height: 100%;
+    }
+    .ds-l,
+    .text-l {
+        justify-content: center;
+    }
+    .about-slider h4 {
+        text-align: center;
+    }
+    .about-quest {
+        height: auto;
+    }
+    .quest-text h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .quest-text input,
+    .quest-text button {
+        height: 30px;
+        font-size: 10px;
+        z-index: 6;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .about-box1 h2 {
+        font-size: 28px;
+    }
+    .about-box1-img {
+        width: 30%;
+    } 
+    .about-box1-img > img {
+        width: 100%;
+    }
+}

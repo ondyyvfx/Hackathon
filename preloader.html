@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/preloader.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <video muted playsinline class="preloader-video" loop>
+          <source src="./vid/launchrocket.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+
+        <div class="galaxy-button">
+          <button class="galaxy-ass">
+            <span class="spark"></span>
+            <span class="backdrop"></span>
+
+            <span class="galaxy__container">
+              <span class="star star--static"></span>
+              <span class="star star--static"></span>
+              <span class="star star--static"></span>
+              <span class="star star--static"></span>
+            </span>
+
+            <span class="galaxy">
+              <span class="galaxy__ring">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </span>
+            </span>
+
+            <span class="text">Запуск</span>
+          </button>
+
+          <div class="bodydrop"></div>
+        </div>
+
+        <div class="launch_rocket"></div>
+      </div>
+    </div>
+
+    <script>
+      // Preloader
+      const launchButton = document.querySelector(".galaxy-ass");
+      const video = document.querySelector(".preloader-video");
+
+      // Запуск кнопки при нажатии на нее
+      launchButton.addEventListener("click", function () {
+        let preloader = document.querySelector(".preloader");
+        let bodydrop = document.querySelector(".bodydrop");
+        preloader.classList.add("on");
+        bodydrop.classList.add("on");
+        video.classList.add("on");
+        video.play();
+        launchButton.classList.add("clicked");
+
+        // Таймер после запуска видео, после которого видео закроется
+        video.addEventListener("playing", function () {
+          setTimeout(() => {
+            let preloader = document.querySelector(".preloader");
+
+            preloader.classList.add("done");
+
+            window.location.href = "./main.html";
+          }, 2550);
+        });
+      });
+
+      // Рандомно создает типо звезды на кнопке
+      const RANDOM = (min, max) =>
+        Math.floor(Math.random() * (max - min + 1) + min);
+      const PARTICLES = document.querySelectorAll(".star");
+      PARTICLES.forEach((P) => {
+        P.setAttribute(
+          "style",
+          `
+          --angle: ${RANDOM(0, 360)};
+          --duration: ${RANDOM(6, 20)};
+          --delay: ${RANDOM(1, 10)};
+          --alpha: ${RANDOM(40, 90) / 100};
+          --size: ${RANDOM(2, 6)};
+          --distance: ${RANDOM(40, 200)};
+        `
+        );
+      });
+    </script>
+  </body>
+</html>

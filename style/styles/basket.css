@@ -1,0 +1,27 @@
+.basket {
+    height: 100vh;
+}
+
+.basket-inner {
+    padding: 130px 0 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.basket-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.basket-empty > p {
+    opacity: .5;
+}

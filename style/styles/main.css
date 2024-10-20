@@ -1,0 +1,255 @@
+main {
+  background: url(../../img/cosmo.png);
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+@keyframes bounce-background {
+  from {
+    background-position: 0 0px;
+  }
+
+  to {
+    background-position: 960px 0;
+  }
+}
+
+main {
+  animation-name: bounce-background;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.main-inner {
+  padding: 130px 0 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.main-column {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-item-ln {
+  width: 100%;
+  height: 500px;
+}
+
+.main-item-sh {
+  width: 100%;
+  height: 280px;
+}
+
+.main-item-ln,
+.main-item-sh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.main-item-ln::after,
+.main-item-sh::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.4s;
+}
+
+.main-item-ln:hover::after,
+.main-item-sh:hover::after {
+  transition: 0.4s;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.main-item-sh > h3,
+.main-item-ln > h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main-item-ln > h3 > a,
+.main-item-sh > h3 > a {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card1 {
+  background: url("../../img/cosplay-card.jpg") center / cover no-repeat;
+}
+
+#card2 {
+  background: url("../../img/poster-card.jpg") center / cover no-repeat;
+}
+
+#card3 {
+  background: url("../../img/accerssories-card.jpg") center / cover no-repeat;
+}
+
+#card4 {
+  background: url("../../img/daki-card.jpg") center / cover no-repeat;
+}
+
+#card5 {
+  background: url("../../img/figure-card.webp") center / cover no-repeat;
+}
+
+#card6 {
+  background: url("../../img/akihabara.jpg") center / cover no-repeat;
+}
+
+.main-best {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-best > h2 {
+  font-size: 32px;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+}
+
+.main-list2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.main-item2 {
+  width: 24%;
+  height: 435px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background: #333;
+  margin: 0 6px 12px 6px;
+  box-shadow: 0px 0px 20px 0px #000;
+}
+
+.main-item2-img {
+  width: 248px;
+  height: 248px;
+}
+
+.main-item2-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-item2-desc {
+  padding: 30px 0;
+}
+
+.main-item2-desc > h4 {
+  color: #fff;
+  height: 57px;
+}
+
+.main-item2-btn {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-item2-btn > button {
+  background: #fde3e5;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #222;
+  font-weight: 600;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.main-item2-btn > button:hover {
+  background: #ffc0c5;
+  transition: 0.4s;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .main-inner {
+    padding: 80px 0 20px;
+  }
+
+  .main-list {
+    flex-wrap: wrap;
+  }
+  .main-column {
+    width: 49%;
+  }
+  .main-column:nth-of-type(3) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .main-item-ln {
+    height: 200px;
+  }
+  .main-item-sh {
+    height: 130px;
+  }
+  #card5 {
+    height: 130px;
+    width: 49%;
+  }
+  #card6 {
+    width: 49%;
+  }
+  .main-item-ln > h3 > a,
+  .main-item-sh > h3 > a {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .main-item2 {
+    width: 280px;
+  }
+}

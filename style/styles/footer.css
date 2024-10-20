@@ -1,0 +1,243 @@
+footer {
+    background: url('../../img/footer-bg.svg') center / cover no-repeat;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: auto;
+    display: block;
+}
+
+.footer-inner {
+    width: 100%;
+    padding: 50px 0 0;
+}
+
+.footer-sub {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-sub > h4 {
+    font-size: 20px;
+}
+
+.footer-sub-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.footer-sub-btn > input {
+    height: 200%;
+    width: 70%;
+    padding: 0 20px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    border: 1px solid #222;
+    border-right: none;
+    font-size: 14px;
+    color: #222;
+}
+
+.footer-sub-btn > button {
+    height: 200%;
+    width: 30%;
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    border: 1px solid #222;
+    background: #fff;
+    color: #222;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.footer-sub-btn > button:hover {
+    transition: .4s;
+    background: #fde3e5;
+}
+
+.footer-links {
+    margin: 50px 0;
+    display: flex;
+    position: relative;
+}
+
+.footer-links-item {
+    padding: 0 10% 0 0;
+}
+
+.footer-links-item > h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer-list-item {
+    margin-bottom: 5px;
+}
+
+.footer-list-item > a {
+    position: relative;
+}
+
+.footer-list-item > a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    transition: .4s;
+}
+
+.footer-list-item > a:hover::after {
+    transition: .4s;
+    width: 100%;
+}
+
+.footer-links-contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-links-contacts-item {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links-contacts-item > a {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.footer-links-contacts-item:first-of-type {
+    background: url(../../img/inst.svg) center / cover no-repeat;
+}
+
+.footer-links-contacts-item:nth-of-type(2) {
+    background: url(../../img/twit.svg) center / cover no-repeat;
+}
+
+.footer-links-contacts-item:nth-of-type(3) {
+    background: url(../../img/tg.svg) center / cover no-repeat;    
+}
+
+.footer-links-contacts-item:nth-of-type(4) {
+    background: url(../../img/ds.svg) center / cover no-repeat;   
+}
+
+.footer-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 0 20px;
+}
+
+.footer-card-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+
+.footer-card {
+    height: 100%;
+    width: 15%;
+    margin-left: 10px;
+}
+
+.footer-card:first-of-type {
+    background: url('../../img/paypal.svg') center / cover no-repeat;
+}
+
+.footer-card:nth-of-type(2) {
+    background: url('../../img/visa.svg') center / cover no-repeat;
+}
+
+.footer-card:nth-of-type(3) {
+    background: url('../../img/mc_symbol.svg') center / cover no-repeat;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    .footer-inner {
+        padding: 20px 0;
+    }
+    
+    .footer-sub {
+        flex-direction: column;
+    }
+
+    .footer-sub-btn {
+        width: 100%;
+        height: 20px;
+        margin: 20px 0;
+    }
+
+    .footer-sub-btn > button {
+        font-size: 10px;
+    }
+
+    .footer-r {
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+
+    .footer-card {
+        width: 30%;
+    }
+
+    .footer-links {
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .footer-sub {
+        flex-direction: column;
+    }
+
+    .footer-sub-btn {
+        width: 70%;
+        height: 20px;
+        margin: 20px auto;
+    }
+
+    .footer-r {
+        padding: 10px 0;
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+
+    .footer-card {
+        width: 30%;
+        height: 30px;
+    }
+
+    .footer-links {
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    
+}

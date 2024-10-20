@@ -1,0 +1,231 @@
+header {
+    width: 100%;
+    height: 80px;
+    background: #222;
+    z-index: 15;
+    position: fixed;
+}
+
+.head-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.head-button-box {
+    height: 100%;
+    padding: 25px;
+}
+
+.head-button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.head-button-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transition: .8s;
+}
+
+.head-button:hover > .head-button-line {
+    background: #fde3e5;
+}
+
+.head-button-line:first-of-type {
+    animation: buttonanimationout1 .8s;
+}
+
+.head-button-line:nth-of-type(3) {
+    animation: buttonanimationout2 .8s;
+}
+
+.head-button-line:nth-of-type(2) {
+    opacity: 1;
+    transition: .8s;
+}
+
+.head-button.active > .head-button-line:first-of-type {
+    transform: translateY(10px) rotate(45deg);
+    animation: buttonanimationin1 .8s;
+}
+
+.head-button.active > .head-button-line:nth-of-type(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    animation: buttonanimationin2 .8s;
+}
+
+.head-button.active > .head-button-line:nth-of-type(2) {
+    opacity: 0;
+    transition: .8s;
+}
+
+@keyframes buttonanimationin1 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+
+@keyframes buttonanimationout1 {
+    0% {
+        transform: translateY(10px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes buttonanimationin2 {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
+@keyframes buttonanimationout2 {
+    0% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.head-logo-box {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.head-logo {
+    height: 100%;
+}
+
+.head-logo > img {
+    height: 110%;
+}
+
+.nav-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-input {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.nav-input > input {
+    height: 50%;
+    padding: 0 10px;
+    background: none;
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: 16px;
+    background: #333;
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #fcfcfc;
+    transition: .4s;
+}
+
+.list-item > a {
+    color: #222;
+}
+
+.list-item:hover {
+    transition: .4s;
+    background: #fde3e5;
+}
+
+.nav-basket {
+    height: 100%;
+    padding: 25px;
+}
+
+.nav-basket > a > img {
+    height: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+    header {
+        height: 60px;
+    }
+
+    .head-button-box {
+        padding: 15px;
+    }
+
+    .head-logo-box {
+        display: none;
+    }
+
+    .nav-box {
+        justify-content: flex-start;
+    }
+
+    .nav-input > input {
+        width: 100%;
+    }
+    
+    .nav-list {
+        display: none;
+    }
+    .nav-basket {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .head-logo-box {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .head-logo-box {
+        left: 25%;
+    }
+}

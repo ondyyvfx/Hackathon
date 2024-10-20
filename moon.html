@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Стиль -->
+    <link rel="stylesheet" href="./moon.css" />
+    <!-- Иконка -->
+    <link rel="icon" href="./img/electro.png" />
+  </head>
+  <body>
+    <!-- Эт луна -->
+    <div class="moon"></div>
+    <div class="moon__crater moon__crater1"></div>
+    <div class="moon__crater moon__crater2"></div>
+    <div class="moon__crater moon__crater3"></div>
+
+    <!-- Эт звезды (на самом деле просто точки) -->
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+
+    
+    <div class="text">
+      <div class="text__title">Moon</div>
+      <div class="text__subtitle">Нил Армстронг</div>
+      <div class="text__description">
+        Нил Олден Армстронг (5 августа 1930 — 25 августа 2012) — американский
+        астронавт НАСА, лётчик-испытатель, космический инженер, профессор
+        университета, военно-морской лётчик США. Первый человек, ступивший на
+        Луну 21 июля 1969 года в ходе лунной экспедиции корабля «Аполлон-11».
+        Армстронг выделялся среди других лётчиков-испытателей своей
+        исключительной выдержкой и хладнокровием, за что получил прозвище
+        «Ледяной капитан».
+      </div>
+      <button class="moon__button moon__button--active"> <a href="./main.html">Вернуться в главную </a></button>
+      <button class="moon__button">Еще...</button>
+    </div>
+
+    <div class="astronaut">
+      <div class="astronaut__backpack"></div>
+      <div class="astronaut__body"></div>
+      <div class="astronaut__body__chest"></div>
+      <div class="astronaut__arm-left1"></div>
+      <div class="astronaut__arm-left2"></div>
+      <div class="astronaut__arm-right1"></div>
+      <div class="astronaut__arm-right2"></div>
+      <div class="astronaut__arm-thumb-left"></div>
+      <div class="astronaut__arm-thumb-right"></div>
+      <div class="astronaut__leg-left"></div>
+      <div class="astronaut__leg-right"></div>
+      <div class="astronaut__foot-left"></div>
+      <div class="astronaut__foot-right"></div>
+      <div class="astronaut__wrist-left"></div>
+      <div class="astronaut__wrist-right"></div>
+
+      <div class="astronaut__cord">
+        <canvas id="cord" height="500px" width="400px"></canvas>
+      </div>
+
+      <div class="astronaut__head">
+        <canvas id="visor" width="60px" height="60px"></canvas>
+        <div class="astronaut__head-visor-flare1"></div>
+        <div class="astronaut__head-visor-flare2"></div>
+      </div>
+    </div>
+
+    <script src="./moon.js"></script>
+  </body>
+</html>

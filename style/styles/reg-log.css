@@ -1,0 +1,240 @@
+.reg-menu {
+    position: fixed;
+    width: 900px;
+    height: 450px;
+    background: linear-gradient(125deg, rgba(2,2,2,.99) 0%, #fde3e5 100%);
+    background: url('../../img/reg-bg.svg');
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 20px 0px #111;
+    transform: translate(150%, -50%);
+    transition: .5s;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.reg-menu.active {
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+.reg-in {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.reg-btn-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.reg-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.reg-btn-line {
+    width: 20px;
+    height: 2px;
+    background: #222;
+}
+
+.reg-btn-line:first-of-type {
+    transform: translateY(9px) rotate(-45deg);
+}
+
+.reg-btn-line:nth-of-type(2) {
+    transform: translateY(-9px) rotate(45deg);
+}
+
+.reg-main-box {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.reg-main-input {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reg-title {
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #fff;
+}
+
+.reg-main-input > input {
+    width: 80%;
+    height: 10%;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #222;
+    background: #fff;
+}
+
+.input-box {
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box > input {
+    width: 48%;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #222;
+    background: #fff;
+}
+
+.input-box > button {
+    width: 48%;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #222;   
+    background: #fff;
+    transition: .4s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input-box > button:hover {
+    background: #fde3e5;
+    transition: .4s;
+}
+
+.reg-main-box2 {
+    width: 50%;
+    height: 100%;
+}
+
+.reg-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diona {
+    height: 100%;
+    transform: translateY(30%);
+}
+
+.reg-img.active > .diona {
+    animation: 1s diona;
+}
+
+@keyframes diona {
+    0% {
+        transform: translateY(100%);
+    }
+    80% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(30%);
+    }
+}
+
+@keyframes hutao {
+    0% {
+        transform: translate(-100%, 10%);
+    }
+    80% {
+        transform: translate(-100%, 10%);
+    }
+    100% {
+        transform: translate(0%, 10%);
+    }
+}
+
+.log-menu {
+    position: fixed;
+    width: 900px;
+    height: 450px;
+    background: url('../../img/log-bg.svg');
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 20px 0px #111;
+    transform: translate(150%, -50%);
+    transition: .5s;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.log-menu.active {
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+.reg-main-input > button {
+    width: 80%;
+    height: 10%;
+    padding: 0 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #222;   
+    background: #fff;
+    transition: .4s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reg-main-input > button:hover {
+    background: #fde3e5;
+    transition: .4s;
+}
+
+.hutao {
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, 10%);
+}
+
+.log-img.active > .hutao {
+    animation: 1s hutao;
+}
+
+.log-title {
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #fff;
+}
+
+.log-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
