@@ -1,1 +1,1 @@
-readme
+запускайте через ./preloader 
