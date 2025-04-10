@@ -41,118 +41,45 @@ headButton.addEventListener("click", function () {
   headMenu.classList.toggle("active");
 });
 
-// Остановка планет во время наведения курсором
+// Корзина
+// попытка сделать корзину не успел из за дедлайна(
+// let cart = []
 
-let theCSSprop;
+// const cartItemsContainer = document.querySelector(".list2-item")
+// const addToCartButtons = document.querySelector(".add-to-cart")
+// const cartList = {
+//   0: {
+//     title: "Полет в Невесомости",
+//     price: "2.400.000",
+//     image: "./img/utilities/gravity.jpeg",
+//     id: 0,
+//   }
+// };
+// const listHtml = document.querySelector(".container")
 
-const venus = document.querySelector(".venus");
+// function createCartHtml(obj){
+//   const div = document.createElement("div")
 
-const planets = {
-  earth: {
-    elem: document.querySelector(".earth"),
-    info: {
-      title: "Земля",
-    },
-  },
-  venus: {
-    elem: document.querySelector(".venus"),
-    info: {
-      title: "Венера",
-    },
-  },
-  mars: {
-    elem: document.querySelector(".mars"),
-    info: {
-      title: "Марс",
-    },
-  },
-  mercury: {
-    elem: document.querySelector(".mercury"),
-    info: {
-      title: "Меркурий",
-    },
-  },
-  neptune: {
-    elem: document.querySelector(".neptune"),
-    info: {
-      title: "Нептун",
-    },
-  },
-  uranus: {
-    elem: document.querySelector(".uranus"),
-    info: {
-      title: "Уран",
-    },
-  },
-  saturn: {
-    elem: document.querySelector(".saturn"),
-    info: {
-      title: "Сатурн",
-    },
-  },
-  jupiter: {
-    elem: document.querySelector(".jupiter"),
-    info: {
-      title: "Юпитер",
-    },
-  },
-};
+//   div.className = "list2-item"
+//   div.innerHTML = `
+//               <div class="list2-item-img">
+//                 <img src="${obj.image}" alt="" />
+//               </div>
+//               <div class="list2-item-desc">
+//                 <h4>${obj.title}</h4>
+//                 <p>${obj.price} тг</p>
+//               </div>
+//               <div class="list2-item-btn">
+//                 <button id="${obj.id}" class="add-to-cart" >В корзину</button>
+//               </div>
+//   `
+//   return(div);
+// }
 
-addEvents(planets.earth, 150);
-addEvents(planets.venus, 105);
-addEvents(planets.mars, 200);
-addEvents(planets.mercury, 75);
-addEvents(planets.neptune, 421);
-addEvents(planets.uranus, 375);
-addEvents(planets.saturn, 315);
-addEvents(planets.jupiter, 250);
+// console.log(createCartHtml(cartList[0]))
 
-function stopAnim(e, translateX) {
-  let theCSSprop = window.getComputedStyle(e).getPropertyValue("rotate");
-  let currentRotation = parseFloat(theCSSprop);
+// function addToCart(productId, productName, productPrice) {  
+//   listHtml.append(createCartHtml(cartList[0]))
+// }
 
-  e.style.animationPlayState = "paused";
-
-  e.style.transform = `translateX(${translateX}px) rotate(${currentRotation}deg)`;
-}
-
-function startAnim(e) {
-  e.style.animationPlayState = "running";
-}
-
-function addEvents(target, t) {
-  target.elem.addEventListener("mouseover", () => {
-    stopAnim(target.elem, t);
-    openModule(target);
-  });
-  target.elem.addEventListener("mouseout", () => {
-    startAnim(target.elem);
-    closeModule(target);
-  });
-}
-
-// Infoblock
-
-function openModule(target) {
-  const info = target.elem.querySelector(".info");
-
-  console.log(target);
-
-  info.innerHTML = `
-      <h2>${target.info.title}</h2>
-    `;
-
-  info.setAttribute(`open`, ``);
-
-  let theCSSprop = window
-    .getComputedStyle(target.elem)
-    .getPropertyValue("rotate");
-  let rotationValue = parseFloat(theCSSprop);
-
-  info.style.transform = `rotate(${-rotationValue}deg)`;
-}
-
-function closeModule(target) {
-  const info = target.elem.querySelector(".info");
-  info.removeAttribute(`open`);
-}
+// addToCart();

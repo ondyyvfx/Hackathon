@@ -446,7 +446,7 @@ h3 {
     background: #B3AFB3;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background: purple;
+    background: gray;
 }
 ::-webkit-scrollbar-track{
     background: #FFFFFF;
